@@ -1,18 +1,22 @@
+package edu.commandes.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Client {
+	private String id;
+	private List<Commande> lesCommandes;
 
-    public String id = null;
-    public String ref = null;
-    public float pu = 0;
+	public Client(String id) {
+		this.id = id;
+		lesCommandes = new ArrayList<>();
+	}
 
-    public String getId() {
-	return id;
-    }
+	public String getId() {
+		return this.id;
+	}
 
-    public void setId(String id) {
-	this.id = id;
-    }
-
-    public void Client(String id) {
-	this.id = null;
-    }
+	public void setId(String newId) {
+		this.id = newId;
+	}
 }
